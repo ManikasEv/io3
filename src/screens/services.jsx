@@ -6,6 +6,7 @@ import Footer from '../sections/footer';
 import NavigationBar from '../sections/navigationbar';
 import textTables from '../textobjects/texttables';
 
+
 const services = [
     {
         id: '01',
