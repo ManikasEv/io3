@@ -92,10 +92,10 @@ const ServicesLpg = () => {
                                             <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
                                         </div>
                                         {/* Text Content */}
-                                        <div className="bg-white p-4 shadow-lg">
+                                        <div className="bg-[#8B5CF6] p-4 shadow-lg border-2 border-purple-300">
                                             <div className="flex items-center gap-2">
-                                                <span className="text-sm text-[#B3A9D2] font-medium">{service.id}</span>
-                                                <h3 className="text-sm font-semibold text-[#B3A9D2]">
+                                                <span className="text-sm text-white font-medium">{service.id}</span>
+                                                <h3 className="text-sm font-semibold text-white">
                                                     {service.name}
                                                 </h3>
                                             </div>
@@ -118,19 +118,19 @@ const ServicesLpg = () => {
                                     onClick={() => setSelectedService(index)}
                                     className={`
                                         flex items-center gap-4 p-4 rounded-lg cursor-pointer
-                                        transition-all duration-300 hover:bg-white/10
-                                        ${selectedService === index ? 'bg-white/20 shadow-lg' : ''}
-                                        group
+                                        transition-all duration-300 hover:bg-[#7C3AED] hover:shadow-lg
+                                        ${selectedService === index ? 'bg-[#8B5CF6] shadow-lg' : 'bg-[#8B5CF6]'}
+                                        group border-2 border-purple-300
                                     `}
                                     whileHover={{ x: 8, scale: 1.02 }}
                                     whileTap={{ scale: 0.98 }}
                                     transition={{ duration: 0.2 }}
                                 >
-                                    <div className={`text-2xl font-light w-12 ${selectedService === index ? 'text-white' : 'text-gray-300'} group-hover:text-white transition-colors`}>
+                                    <div className="text-2xl font-light w-12 text-white group-hover:text-white transition-colors">
                                         {service.id}
                                     </div>
                                     <div>
-                                        <h4 className={`text-xl font-semibold ${selectedService === index ? 'text-white' : 'text-gray-300'} group-hover:text-white transition-colors`}>
+                                        <h4 className="text-xl font-semibold text-white group-hover:text-white transition-colors">
                                             {service.name}
                                         </h4>
                                     </div>

@@ -224,19 +224,17 @@ const Services = () => {
                         {services.map((service) => (
                             <motion.div
                                 key={service.id}
-                                className={`bg-[#7FAE90] rounded-lg p-6 w-[75vw] flex-shrink-0 cursor-pointer transition-all relative ${
+                                className={`bg-[#8B5CF6] rounded-lg p-6 w-[75vw] flex-shrink-0 cursor-pointer transition-all relative ${
                                     selectedService.id === service.id
-                                        ? 'opacity-100 scale-[1.02]'
-                                        : 'opacity-80 hover:opacity-90'
+                                        ? 'opacity-100 scale-[1.02] shadow-lg'
+                                        : 'opacity-80 hover:opacity-90 hover:bg-[#7C3AED]'
                                 }`}
                                 onClick={() => setSelectedService(service)}
                                 whileTap={{ scale: 0.98 }}
                             >
-                                <div className="flex items-center gap-3 absolute top-6 left-6">
+                                <div className="flex items-center justify-center gap-3 h-full">
                                     <span className="text-sm text-white opacity-70">{service.id}</span>
-                                </div>
-                                <div className="absolute bottom-6 left-6 right-6 bg-[#7FAE90]/70 backdrop-blur-sm text-white text-center py-2 rounded-[70px]">
-                                    <h3 className="text-sm font-medium">{service.title}</h3>
+                                    <h3 className="text-sm font-medium text-white">{service.title}</h3>
                                 </div>
                             </motion.div>
                         ))}
