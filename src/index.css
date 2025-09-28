@@ -1,0 +1,44 @@
+@import "tailwindcss";
+
+@theme {
+  /* Typography */
+  --font-script: Manrope;
+
+  /* Font Sizes */
+  --text-5xl: 4rem;
+  --text-4xl: 3rem;
+  --text-3xl: 2rem;
+  --text-2xl: 1.5rem;
+  --text-xl: 1.25rem;
+
+  /* Colors */
+  --color-primary-50: #F2F7FA;
+  --color-primary-50: #F2F7FA;
+  --color-primary-100: #E5EEF4;
+  --color-primary-200: #D7E5EE;
+  --color-primary-300: #C0DBED;
+  --color-primary-400: #AAD6F4;
+  --color-primary-500: #8FC1E3;
+  --color-primary-600: #4C5B9B;
+  --color-primary-700: #2D3C66;
+  --color-primary-800: #0C101B;
+  --color-primary-900: #020610;
+  
+  --color-secondary-50: #DDEFE4;
+  --color-secondary-500: #7FAE90;
+  --color-secondary-900: #B3A9D2;
+
+  --color-third-500: #B3A9D2;
+  
+  
+}
+
+/* Hide scrollbar but keep functionality */
+.hide-scrollbar {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+    display: none;  /* Chrome, Safari and Opera */
+}
