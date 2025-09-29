@@ -7,6 +7,7 @@ import hypnosesImg from '../assets/hypnoses.jpg';
 import rejuvanceImg from '../assets/rejuvance.jpg';
 import mindfulnessImg from '../assets/mindfulness.jpg';
 import thetaImg from '../assets/theta.jpg';
+import quantumImg from '../assets/quantum.jpg';
 
 const ServicesLpg = () => {
     const [selectedService, setSelectedService] = useState(0);
@@ -37,6 +38,11 @@ const ServicesLpg = () => {
             id: "05",
             name: textTables.mindfulness.title,
             image: mindfulnessImg,
+        },
+        {
+            id: "06",
+            name: textTables.quantumBiofeedback.title,
+            image: quantumImg,
         }
     ];
 
@@ -53,14 +59,14 @@ const ServicesLpg = () => {
             }}
         >
             <div className="max-w-7xl mx-auto px-4 md:px-8">
-                <div className="text-center mb-8">
+                {/* <div className="text-center mb-8">
                     <h2 className="text-4xl font-semibold mb-4 text-white">
                         We don't just treat we realign.
                     </h2>
-                    <p className="text-xl text-white/90">
+                    <p className="text-xl text-white/90"> 
                         Explore our science-backed 🔬 energy-led therapies. 📸
                     </p>
-                </div>
+                </div> */}
 
                 {/* Mobile View */}
                 <div className="md:hidden">
@@ -87,7 +93,7 @@ const ServicesLpg = () => {
                                             <img 
                                                 src={service.image} 
                                                 alt={service.name}
-                                                className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+                                                className="w-full h-full object-contain object-center bg-white transition-transform duration-500 hover:scale-105"
                                             />
                                             <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
                                         </div>
@@ -109,8 +115,7 @@ const ServicesLpg = () => {
 
                 {/* Desktop View */}
                 <div className="hidden md:flex flex-row gap-12">
-                    <div className="w-1/2 relative">
-                        <h3 className="text-3xl font-semibold mb-8 text-white">Our Services</h3>
+                    <div className="w-1/2 relative flex flex-col justify-center">
                         <div className="space-y-2">
                             {services.map((service, index) => (
                                 <motion.div
@@ -150,7 +155,7 @@ const ServicesLpg = () => {
                             <img 
                                 src={services[selectedService].image} 
                                 alt={services[selectedService].name}
-                                className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
+                                className="w-full h-full object-contain object-center bg-white transition-transform duration-700 hover:scale-105"
                             />
                             <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent" />
                             <div className="absolute bottom-6 right-6">

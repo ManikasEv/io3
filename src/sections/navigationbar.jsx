@@ -27,7 +27,7 @@ const NavigationBar = () => {
                     transition={{ duration: 0.6, ease: "easeOut" }}
                     onClick={() => navigate('/')}
                 >
-                    <img src={logoImage} alt="logo123" className="w-6 h-6 rounded-full object-cover" />
+                    <img src={logoImage} alt="logo123" className="w-8 h-8 object-contain" />
                     <h1 className={`${isServicesPage ? 'text-black' : 'text-black'} text-base md:text-xl font-thin font-script`}>Inside Observation</h1>
                 </motion.div>
                 <motion.button 

@@ -7,7 +7,7 @@ const Attributes = () => {
     const planets = [
         { 
             id: 1, 
-            title: "Quantum Biofeedback",
+            title: "Regression Therapy",
             color: "from-primary-500/90 to-primary-500",
             position: "ml-[5%]",
             marginTop: "",
@@ -23,7 +23,7 @@ const Attributes = () => {
         },
         { 
             id: 3, 
-            title: "Regression Therapy",
+            title: "Quantum Biofeedback",
             color: "from-primary-700/90 to-primary-700",
             position: "ml-[35%]",
             marginTop: "-mt-20",

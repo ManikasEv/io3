@@ -8,27 +8,26 @@ const SmallStories = () => {
     const cards = [
         {
             id: 1,
-            statistic: "97%",
-            description: "Reported rate of release",
-            title: "Emotional Release Journey",
-            longText: "Our success rate speaks volumes about the effectiveness of our approach. Through carefully designed sessions and personalized attention, clients experience profound emotional release. This process involves understanding deep-seated patterns, addressing core issues, and implementing proven techniques for lasting relief. Many report significant improvements in their daily lives, relationships, and overall well-being.",
+            // statistic: "97%",
+            // description: "Reported rate of release",
+            title: "What connects us all?",
+            longText: "The way we color and experience the world. Research into the body’s functioning shows that it is our eyes and our perception that give color to everything around us. We are the ones who give meaning and importance to what surrounds us. Things exist because we observe them. What makes us different is the way we each created our belief system, the inner architecture formed from experience, thought, and emotion. We all share the same core needs, but the way we learned to meet those needs is deeply personal. We all experience the same spectrum of emotions, yet we each choose, moment by moment, how to feel and express them. We all face challenges, but the way we respond is shaped by our unique blend of beliefs and desires.",
             bgImage: "bg-[url('/src/assets/release-image.jpg')]"
         },
         {
             id: 2,
-            statistic: "1200+",
-            description: "Individual sessions completed",
-            title: "Experience & Expertise",
-            longText: "Each session represents a unique journey of healing and growth. Our extensive experience has allowed us to refine our methods and adapt to individual needs. We've witnessed countless breakthroughs, helped clients overcome various challenges, and continuously evolved our approach based on real-world results and feedback. This wealth of experience ensures that every new client benefits from proven, tested methods.",
+            // statistic: "97%",
+            // description: "Individual sessions completed",
+            title: "What connects us all?",
+            longText: "Ιs our innate right to life, the right to experience it through the wise vehicle of our body. The body perceives experience through sensations, emotions, thoughts, and awareness. Everything we have ever lived and everything we wish to live, is stored in the subconscious, which is held within the body. It is here that all the elements shaping who we are today reside. In the present moment, we are potentially everything. The subconscious longs for our attention, our presence; it invites us to step into the role of the observer. This attention is often pulled into timelines called ‘past’ and ‘future’: the past as memories, and the future as desires, goals, or dreams. And yet, the most valuable insights we need right now often lie hidden in those very timelines, within the subconscious.",
             bgImage: "bg-[url('/src/assets/sessions-image.jpg')]"
         },
         {
             id: 3,
-            statistic: "100%",
-            description: "Tailored care per individual",
-            title: "Personalized Healing Approach",
-            longText: "We believe that no two healing journeys are identical. Our commitment to personalized care means that every treatment plan is uniquely crafted. We take into account your personal history, specific needs, goals, and preferences. This individualized approach ensures that you receive the most effective and relevant support for your situation, leading to better outcomes and lasting positive changes.",
-            bgImage: "bg-[url('/src/assets/care-image.jpg')]"
+            // statistic: "100%",
+            // description: "Tailored care per individual",
+            title: "What Is the Role of Energy Healing?",
+            longText: "Through energy healing and the techniques of complementary therapy we open a direct channel of communication between the subconscious and the conscious self. Everything that shows up in our lives as a dysfunctional pattern or experience is, in truth, a call for connection—an invitation to unite what is hidden with what is aware. This inner dialogue brings powerful gifts: Liberation; Restoration; Detachment from old identifications; Transmutation of stagnant energy; Reconnection with our truest self; and the awakening of the innate wisdom of the body. ‘Awakening happens when the subconscious becomes conscious.’ — IO"
         }
     ];
 
@@ -62,15 +61,10 @@ const SmallStories = () => {
                 ease: "easeOut"
             }}
         >
-            <h2 className="text-4xl font-semibold text-center mb-4">
-                Every Number Holds
-            </h2>
-            <h2 className="text-4xl font-semibold text-center mb-8">
-                a Healing Story
-            </h2>
-            <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
-                Our numbers reflect more than progress — they show how energy, care, and clarity change lives.
-            </p>
+
+            <h1 className="text-center text-gray-700 mb-12 max-w-3xl mx-auto font-extrabold tracking-tight leading-tight text-2xl sm:text-3xl md:text-5xl lg:text-6xl">
+                HEALTH OUR NUMBER ONE WEALTH
+            </h1>
 
             {/* Mobile Layout */}
             <div className="md:hidden w-full">

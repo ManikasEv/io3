@@ -9,7 +9,7 @@ const Footer = () => {
                     {/* Logo Section */}
                     <div className="w-1/3">
                         <div className="flex items-center gap-2">
-                            <img src={logoImage} alt="Inside Observation" className="w-8 h-8 rounded-full object-cover" />
+                            <img src={logoImage} alt="Inside Observation" className="w-10 h-10 object-contain" />
                             <span className="text-lg font-medium">Inside Observation</span>
                         </div>
                         
@@ -65,7 +65,7 @@ const Footer = () => {
 
                     {/* Logo and Name */}
                     <div className="flex items-center justify-center gap-2">
-                        <img src={logoImage} alt="Inside Observation" className="w-8 h-8 rounded-full object-cover" />
+                        <img src={logoImage} alt="Inside Observation" className="w-10 h-10 object-contain" />
                         <span className="text-lg font-medium">Inside Observation</span>
                     </div>
 

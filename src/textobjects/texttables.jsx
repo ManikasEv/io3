@@ -251,6 +251,99 @@ const textTables = {
       }
     ]
   },
+
+  quantumBiofeedback: {
+    title: 'Quantum Biofeedback',
+    subtitle: 'A Holistic Biophysical Approach in Complementary Medicine',
+    description: 'What Is Quantum Biofeedback?',
+    content: 'Quantum Biofeedback is an innovative method of energetic assessment and rebalancing, based on the principles of Quantum Physics and bioresonance technology. It is a tool that "listens" to the body at the cellular and energetic level, helping identify imbalances and support the body\'s self-regulation and return to its natural harmony.',
+    sections: [
+      {
+        heading: 'What Is Biofeedback?',
+        content: 'Biofeedback is a widely used technology in various health fields. It measures in real time:',
+        points: [
+          'Electroencephalography (EEG)',
+          'Electrocardiography (ECG)',
+          'Galvanic Skin Response (GSR)'
+        ],
+        note: 'Biofeedback devices can record the body\'s analog electrical signals and convert them into meaningful information.'
+      },
+      {
+        heading: 'Quantum Science Integration',
+        content: 'Quantum Science explains that the body is a field of electromagnetic vibrating energy — we are electromagnetic beings. Quantum Biofeedback expands on classical biofeedback by combining GSR with computer technology to detect stress indicators on physical, emotional, mental, and energetic levels.',
+        note: 'The term "quantum" indicates that the method works not only at a physical or biological level, but also on the levels of energy, information, and intention. It reaches the subtle dimensions of our existence, where awareness and observation actively influence the healing process.'
+      },
+      {
+        heading: 'Using the NUCLEUS Device',
+        content: 'Through the NUCLEUS device, we detect both harmonic and disturbed oscillations in the body. In real time, resonance adjustment is applied to support physical and emotional well-being.',
+        points: [
+          'Detection of pathological signals, imbalances, dysfunctions, physical/mental/environmental stress',
+          'Energetic scanning of the body, organs, tissues, nervous system, and energy systems',
+          'Recording of the body\'s bioresonant signals and feedback with appropriate balancing frequencies',
+          'Relief from physical or emotional stress',
+          'Support in managing chronic conditions',
+          'Cellular training and memory recall of the healthy state',
+          'Activation of the body\'s self-healing power',
+          'Deepened connection between mind, body, and soul'
+        ]
+      },
+      {
+        heading: 'Suitable For:',
+        sections: [
+          {
+            subheading: 'Children',
+            points: [
+              'Anxiety, phobias, insomnia, hyperactivity',
+              'Psychologically or energetically sensitive children',
+              'Adaptation periods (e.g. school, family transitions)',
+              'Unexplained physical symptoms with no medical diagnosis'
+            ]
+          },
+          {
+            subheading: 'Adults',
+            points: [
+              'Stress and symptom management',
+              'Athletes and physically active individuals',
+              'Support with work, relationships, and daily life',
+              'Wellness and natural beauty enhancement'
+            ]
+          },
+          {
+            subheading: 'Elderly',
+            points: [
+              'Gentle support for body, mind, and heart',
+              'Relief from tension and pain',
+              'Assistance in chronic conditions',
+              'Emotional calm and mental support',
+              'Improved sleep and release from fear'
+            ]
+          },
+          {
+            subheading: 'Animals',
+            points: [
+              'Therapy or service animals',
+              'Post-illness or post-surgery recovery',
+              'Behavioral changes',
+              'Stress due to environmental or life changes'
+            ]
+          },
+          {
+            subheading: 'Agricultural Systems',
+            points: [
+              'Increased crop performance',
+              'Enhanced soil and plant vitality',
+              'Protection from stress-inducing factors',
+              'Activation of the field of abundance and prosperity'
+            ]
+          }
+        ]
+      },
+      {
+        heading: 'Disclaimer',
+        content: 'The NUCLEUS Quantum Biofeedback system is not designed for medical diagnosis. It is used for stress detection, pain management, and muscle retraining. If you have health-related concerns, please consult a licensed physician.'
+      }
+    ]
+  },
 };
 
 export default textTables;

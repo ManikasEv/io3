@@ -62,7 +62,7 @@ const Hero = () => {
                 <img 
                     src={heroImg} 
                     alt="Healing through presence" 
-                    className="absolute inset-0 w-full h-full object-cover"
+                    className="absolute inset-0 w-full h-full object-contain object-center bg-white"
                 />
                 <div className="absolute inset-0">
                     <div className="absolute top-[45%] right-8">
@@ -128,7 +128,7 @@ const Hero = () => {
                     <img 
                         src={heroImg} 
                         alt="Healing through presence" 
-                        className="absolute inset-0 w-full h-full object-cover"
+                        className="absolute inset-0 w-full h-full object-contain object-center bg-white"
                     />
                     <div className="absolute inset-0 flex flex-col justify-center items-center">
                         {/* Right side tags */}
