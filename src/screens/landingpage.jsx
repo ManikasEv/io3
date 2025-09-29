@@ -21,7 +21,7 @@ const LandingPage = () => {
             <ServicesLpg />
             <AboutMe />
             {/* <Articles /> */}
-            <FrequentlyAskedQuestions />
+            {/* <FrequentlyAskedQuestions /> */}
             <ContactForm />
             <Footer />
         </div>

@@ -54,7 +54,7 @@ const ContactForm = () => {
                             name="name"
                             value={formData.name}
                             onChange={handleChange}
-                            placeholder="Jean Masad"
+                            placeholder="First Name Last Name"
                             className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:outline-none focus:border-[#7FAE90]"
                         />
                     </div>
@@ -187,7 +187,7 @@ const ContactForm = () => {
                                             name="name"
                                             value={formData.name}
                                             onChange={handleChange}
-                                            placeholder="Jean Masad"
+                                            placeholder="First Name Last Name"
                                             className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:outline-none focus:border-[#7FAE90]"
                                         />
                                     </div>

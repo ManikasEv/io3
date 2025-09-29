@@ -55,6 +55,15 @@ const services = [
         description: textTables.mindfulness.description,
         content: textTables.mindfulness.content,
         sections: textTables.mindfulness.sections
+    },
+    {
+        id: '06',
+        title: 'Quantum Biofeedback',
+        displayTitle: textTables.quantumBiofeedback.title,
+        subtitle: textTables.quantumBiofeedback.subtitle,
+        description: textTables.quantumBiofeedback.description,
+        content: textTables.quantumBiofeedback.content,
+        sections: textTables.quantumBiofeedback.sections
     }
 ];
 
