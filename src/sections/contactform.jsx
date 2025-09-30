@@ -39,10 +39,10 @@ const ContactForm = () => {
                 }}
             >
                 <div className="text-center mb-8">
-                    <h2 className="text-2xl font-semibold mb-2">
+                    <h2 className="text-2xl font-semibold">
                         Let's Connect & Begin
                     </h2>
-                    <h2 className="text-2xl font-semibold mb-6">
+                    <h2 className="text-2xl font-semibold mt-[-6px] mb-6">
                         Your Healing Journey
                     </h2>
                 </div>
@@ -111,19 +111,17 @@ const ContactForm = () => {
 
                 {/* Contact Info for Mobile */}
                 <div className="mt-12 space-y-6 flex flex-col items-center">
-                    {/* <div className="flex items-start gap-3">
-                        <span className="text-red-500">📍</span>
-                        <div className="text-center">
-                            <p className="text-gray-900 font-medium">Location</p>
-                            <p className="text-gray-600">Neo Psychiko, Athens GR 15451</p>
-                        </div>
-                    </div> */}
-                    <div className="flex items-start gap-3">
+                    <div className="flex items-center gap-3">
+                        <span>👤</span>
+                        <p className="text-gray-600">GIOLANTA KYLAFI</p>
+                    </div>
+                    <div className="flex items-center gap-3">
+                        <span>📧</span>
+                        <p className="text-gray-600">info@insideobservation.com</p>
+                    </div>
+                    <div className="flex items-center gap-3">
                         <span>📞</span>
-                        <div className="text-center">
-                            <p className="text-gray-900 font-medium">Phone</p>
-                            <p className="text-gray-600">+41 78 226 71 71</p>
-                        </div>
+                        <p className="text-gray-600">+41 78 226 71 71</p>
                     </div>
                 </div>
             </motion.section>
@@ -155,24 +153,22 @@ const ContactForm = () => {
                                 Begin Your Healing Journey
                             </h2>
                             <p className="text-white/90 mb-8 text-sm">
-                                Share your needs and let's co-create your path to clarity, balance, and better health – tailored just for you.
+                                Services are available by appointment in Zurich, Wädenswil , online, or at your preferred location.
                             </p>
                             
                             {/* Contact Info */}
                             <div className="space-y-4">
-                                {/* <div className="flex items-start gap-2">
-                                    <span className="text-red-500">📍</span>
-                                    <div>
-                                        <p className="text-white font-medium">Location</p>
-                                        <p className="text-white/80">Neo Psychiko, Athens GR 15451</p>
-                                    </div>
-                                </div> */}
-                                <div className="flex items-start gap-2">
+                                <div className="flex items-center gap-2">
+                                    <span className="text-white/80">👤</span>
+                                    <p className="text-white/80">GIOLANTA KYLAFI</p>
+                                </div>
+                                <div className="flex items-center gap-2">
+                                    <span className="text-white/80">📧</span>
+                                    <p className="text-white/80">info@insideobservation.com</p>
+                                </div>
+                                <div className="flex items-center gap-2">
                                     <span className="text-white/80">📞</span>
-                                    <div>
-                                        <p className="text-white font-medium">Phone</p>
-                                        <p className="text-white/80">+41 78 226 71 71</p>
-                                    </div>
+                                    <p className="text-white/80">+41 78 226 71 71</p>
                                 </div>
                             </div>
                         </div>

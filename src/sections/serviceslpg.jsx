@@ -16,33 +16,33 @@ const ServicesLpg = () => {
     const services = [
         {
             id: "01",
+            name: textTables.quantumBiofeedback.title,
+            image: quantumImg,
+        },
+        {
+            id: "02",
             name: textTables.energyTherapies.title,
             image: earthImg,
         },
         {
-            id: "02",
-            name: textTables.regressionTherapy.title,
-            image: thetaImg,
-        },
-        {
             id: "03",
-            name: textTables.hypnotherapy.title,
-            image: hypnosesImg,
-        },
-        {
-            id: "04",
             name: textTables.rejuvance.title,
             image: rejuvanceImg,
         },
         {
+            id: "04",
+            name: textTables.regressionTherapy.title,
+            image: thetaImg,
+        },
+        {
             id: "05",
-            name: textTables.mindfulness.title,
-            image: mindfulnessImg,
+            name: textTables.hypnotherapy.title,
+            image: hypnosesImg,
         },
         {
             id: "06",
-            name: textTables.quantumBiofeedback.title,
-            image: quantumImg,
+            name: textTables.mindfulness.title,
+            image: mindfulnessImg,
         }
     ];
 

@@ -10,6 +10,14 @@ import textTables from '../textobjects/texttables';
 const services = [
     {
         id: '01',
+        title: 'Quantum Biofeedback',
+        displayTitle: textTables.quantumBiofeedback.title,
+        subtitle: textTables.quantumBiofeedback.subtitle,
+        description: textTables.quantumBiofeedback.description,
+        sections: textTables.quantumBiofeedback.sections
+    },
+    {
+        id: '02',
         title: 'Energy Therapies',
         displayTitle: textTables.energyTherapies.title,
         subtitle: textTables.energyTherapies.subtitle,
@@ -17,7 +25,16 @@ const services = [
         sections: textTables.energyTherapies.sections
     },
     {
-        id: '02',
+        id: '03',
+        title: 'Rejuvance Face',
+        displayTitle: textTables.rejuvance.title,
+        subtitle: textTables.rejuvance.subtitle,
+        tagline: textTables.rejuvance.tagline,
+        description: textTables.rejuvance.description,
+        sections: textTables.rejuvance.sections
+    },
+    {
+        id: '04',
         title: 'Regression Therapy',
         displayTitle: textTables.regressionTherapy.title,
         subtitle: textTables.regressionTherapy.subtitle,
@@ -28,7 +45,7 @@ const services = [
         sections: textTables.regressionTherapy.sections
     },
     {
-        id: '03',
+        id: '05',
         title: 'Hypnotherapy',
         displayTitle: textTables.hypnotherapy.title,
         subtitle: textTables.hypnotherapy.subtitle,
@@ -39,31 +56,14 @@ const services = [
         sections: textTables.hypnotherapy.sections
     },
     {
-        id: '04',
-        title: 'Rejuvance Face',
-        displayTitle: textTables.rejuvance.title,
-        subtitle: textTables.rejuvance.subtitle,
-        tagline: textTables.rejuvance.tagline,
-        description: textTables.rejuvance.description,
-        sections: textTables.rejuvance.sections
-    },
-    {
-        id: '05',
+        id: '06',
         title: 'Mindfulness & Meditation',
         displayTitle: textTables.mindfulness.title,
+        subtitle: textTables.mindfulness.subtitle,
         certification: textTables.mindfulness.certification,
         description: textTables.mindfulness.description,
         content: textTables.mindfulness.content,
         sections: textTables.mindfulness.sections
-    },
-    {
-        id: '06',
-        title: 'Quantum Biofeedback',
-        displayTitle: textTables.quantumBiofeedback.title,
-        subtitle: textTables.quantumBiofeedback.subtitle,
-        description: textTables.quantumBiofeedback.description,
-        content: textTables.quantumBiofeedback.content,
-        sections: textTables.quantumBiofeedback.sections
     }
 ];
 
@@ -96,34 +96,34 @@ const Services = () => {
             <div className="space-y-6">
                 {/* Title and Subtitle */}
                 <div>
-                    <h2 className="text-3xl font-medium mb-2">{service.displayTitle}</h2>
+                    <h2 className="text-3xl font-medium mb-2 text-gray-900">{service.displayTitle}</h2>
                     {service.subtitle && (
-                        <h3 className="text-xl text-gray-600 mb-1">{service.subtitle}</h3>
+                        <h3 className="text-xl text-gray-800 mb-1">{service.subtitle}</h3>
                     )}
                     {service.certification && (
-                        <p className="text-sm text-gray-500 mb-4">{service.certification}</p>
+                        <p className="text-sm text-gray-700 mb-4">{service.certification}</p>
                     )}
                     {service.tagline && (
-                        <p className="text-lg text-gray-600 italic mb-4">{service.tagline}</p>
+                        <p className="text-lg text-gray-800 italic mb-4">{service.tagline}</p>
                     )}
                 </div>
 
                 {/* Description */}
                 {service.description && (
                     <div>
-                        <h4 className="text-lg font-medium text-gray-800 mb-2">{service.description}</h4>
+                        <h4 className="text-lg font-medium text-gray-900 mb-2">{service.description}</h4>
                     </div>
                 )}
 
                 {/* Main Content */}
                 {service.content && (
-                    <p className="text-gray-700 leading-7">{service.content}</p>
+                    <p className="text-gray-800 leading-7">{service.content}</p>
                 )}
 
                 {/* Methods/Applications */}
                 {service.methods && (
                     <div>
-                        <ul className="list-disc list-inside space-y-1 text-gray-700">
+                        <ul className="list-disc list-inside space-y-1 text-gray-800">
                             {service.methods.map((method, index) => (
                                 <li key={index}>{method}</li>
                             ))}
@@ -133,7 +133,7 @@ const Services = () => {
 
                 {service.applications && (
                     <div>
-                        <ul className="list-disc list-inside space-y-1 text-gray-700">
+                        <ul className="list-disc list-inside space-y-1 text-gray-800">
                             {service.applications.map((app, index) => (
                                 <li key={index}>{app}</li>
                             ))}
@@ -145,26 +145,26 @@ const Services = () => {
                 {service.sections && service.sections.map((section, index) => (
                     <div key={index} className="space-y-3">
                         {section.heading && (
-                            <h4 className="text-lg font-medium text-gray-800">{section.heading}</h4>
+                            <h4 className="text-lg font-medium text-gray-900">{section.heading}</h4>
                         )}
                         {section.content && (
-                            <p className="text-gray-700 leading-7">{section.content}</p>
+                            <p className="text-gray-800 leading-7">{section.content}</p>
                         )}
                         {section.points && (
-                            <ul className="list-disc list-inside space-y-1 text-gray-700">
+                            <ul className="list-disc list-inside space-y-1 text-gray-800">
                                 {section.points.map((point, pointIndex) => (
                                     <li key={pointIndex}>{point}</li>
                                 ))}
                             </ul>
                         )}
                         {section.note && (
-                            <p className="text-gray-600 italic text-sm">{section.note}</p>
+                            <p className="text-gray-700 italic text-sm">{section.note}</p>
                         )}
                         {section.quote && (
                             <div className="bg-gray-50 p-4 rounded-lg border-l-4 border-gray-300">
-                                <blockquote className="text-gray-700 italic">"{section.quote}"</blockquote>
+                                <blockquote className="text-gray-800 italic">"{section.quote}"</blockquote>
                                 {section.author && (
-                                    <p className="text-sm text-gray-500 mt-2">— {section.author}</p>
+                                    <p className="text-sm text-gray-600 mt-2">— {section.author}</p>
                                 )}
                             </div>
                         )}

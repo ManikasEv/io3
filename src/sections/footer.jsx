@@ -1,4 +1,4 @@
-import logoImage from '../assets/logo.png';
+import logoImage from '../assets/fulllogo.png';
 
 const Footer = () => {
     return (
@@ -9,8 +9,8 @@ const Footer = () => {
                     {/* Logo Section */}
                     <div className="w-1/3">
                         <div className="flex items-center gap-2">
-                            <img src={logoImage} alt="Inside Observation" className="w-10 h-10 object-contain" />
-                            <span className="text-lg font-medium">Inside Observation</span>
+                            <img src={logoImage} alt="Inside Observation" className="w-42 object-contain" />
+                           
                         </div>
                         
                     </div>
@@ -65,8 +65,8 @@ const Footer = () => {
 
                     {/* Logo and Name */}
                     <div className="flex items-center justify-center gap-2">
-                        <img src={logoImage} alt="Inside Observation" className="w-10 h-10 object-contain" />
-                        <span className="text-lg font-medium">Inside Observation</span>
+                        <img src={logoImage} alt="Inside Observation" className="w-42 h-16 object-contain" />
+                       
                     </div>
 
                    

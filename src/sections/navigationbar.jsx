@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import { useEffect, useState } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
-import logoImage from '../assets/logo.png';
+import logoImage from '../assets/fulllogo.png';
 
 const NavigationBar = () => {
     const [isVisible, setIsVisible] = useState(false);
@@ -18,17 +18,16 @@ const NavigationBar = () => {
     }, []);
 
     return (
-        <nav className={`relative md:absolute z-10 w-full px-4 md:px-12 py-3 md:py-4 ${isServicesPage ? 'bg-white' : 'bg-transparent'}`}>
+        <nav className={`relative md:absolute z-10 w-full px-4 md:px-12 py-3 md:top-0 md:py-4 ${isServicesPage ? 'bg-white' : 'bg-transparent'}`}>
             <div className="flex justify-between items-center w-full">
                 <motion.div 
-                    className="flex items-center gap-2 cursor-pointer"
+                    className="flex items-center cursor-pointer"
                     initial={{ opacity: 0, x: -20 }}
                     animate={isVisible ? { opacity: 1, x: 0 } : {}}
                     transition={{ duration: 0.6, ease: "easeOut" }}
                     onClick={() => navigate('/')}
                 >
-                    <img src={logoImage} alt="logo123" className="w-8 h-8 object-contain" />
-                    <h1 className={`${isServicesPage ? 'text-black' : 'text-black'} text-base md:text-xl font-thin font-script`}>Inside Observation</h1>
+                    <img src={logoImage} alt="Inside Observation Logo" className="w-48 md:w-48 object-contain" />
                 </motion.div>
                 <motion.button 
                     className={`${
