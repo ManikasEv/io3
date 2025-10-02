@@ -48,7 +48,7 @@ const Hero = () => {
     return (
         <motion.section 
             id="hero" 
-            className="relative w-full h-[50vh] md:h-[80vh] bg-[#7FAE90]"
+            className="relative w-full h-[50vh] md:h-[80vh] bg-gradient-to-br from-white to-pink-200"
             initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true, amount: 0.3 }}
@@ -105,7 +105,7 @@ const Hero = () => {
                         <div className="mb-12 md:mb-16 mt-3 md:mt-4">
                             <button 
                                 onClick={() => scrollToSection('serviceslpg')}
-                                className="bg-primary-500 p-1.5 md:p-2 border-2 text-sm md:text-base font-semibold rounded text-black hover:bg-secondary-500 hover:text-white hover:border-white transition-all hover:duration-300 hover:opacity-90"
+                                className="bg-primary-500 p-1.5 md:p-2 border-2 text-sm md:text-base font-semibold rounded text-black hover:bg-pink-300 hover:text-white hover:border-white transition-all hover:duration-300 hover:opacity-90"
                             >
                                 Our Services
                             </button>

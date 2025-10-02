@@ -38,7 +38,7 @@ const AboutMe = () => {
                                 alt="Dr. Emily Parker"
                                 className="w-full h-full object-cover"
                             />
-                            <div className="absolute top-60 bottom-0 left-0 right-0 mx-auto w-[75%] bg-[#7FAE90]/70 backdrop-blur-sm text-white text-center py-2 rounded-[70px]">
+                            <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-[80%] bg-[#7FAE90]/70 backdrop-blur-sm text-white text-center py-2 rounded-[70px]">
                                 <p className="font-medium text-sm">Gionianta Kylafi</p>
                             </div>
                         </div>

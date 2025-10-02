@@ -55,7 +55,7 @@ const ContactForm = () => {
                             value={formData.name}
                             onChange={handleChange}
                             placeholder="First Name Last Name"
-                            className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:outline-none focus:border-[#7FAE90]"
+                            className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:outline-none focus:border-pink-300"
                         />
                     </div>
                     <div>
@@ -65,7 +65,7 @@ const ContactForm = () => {
                             value={formData.email}
                             onChange={handleChange}
                             placeholder="Email Address"
-                            className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:outline-none focus:border-[#7FAE90]"
+                            className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:outline-none focus:border-pink-300"
                         />
                     </div>
                     <div>
@@ -75,7 +75,7 @@ const ContactForm = () => {
                             value={formData.phone}
                             onChange={handleChange}
                             placeholder="Phone Number"
-                            className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:outline-none focus:border-[#7FAE90]"
+                            className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:outline-none focus:border-pink-300"
                         />
                     </div>
                     <div>
@@ -85,7 +85,7 @@ const ContactForm = () => {
                             onChange={handleChange}
                             placeholder="Your Message"
                             rows="4"
-                            className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:outline-none focus:border-[#7FAE90] resize-none"
+                            className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:outline-none focus:border-pink-300 resize-none"
                         />
                     </div>
                     <div className="flex items-center gap-2">
@@ -95,7 +95,7 @@ const ContactForm = () => {
                             id="privacyPolicy"
                             checked={formData.privacyPolicy}
                             onChange={handleChange}
-                            className="rounded border-gray-300 text-[#7FAE90] focus:ring-[#7FAE90]"
+                            className="rounded border-gray-300 text-pink-500 focus:ring-pink-300"
                         />
                         <label htmlFor="privacyPolicy" className="text-sm text-gray-600">
                             I have read and accept the <a href="#" className="text-[#4C5B9B] hover:underline">privacy policy</a>
@@ -184,7 +184,7 @@ const ContactForm = () => {
                                             value={formData.name}
                                             onChange={handleChange}
                                             placeholder="First Name Last Name"
-                                            className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:outline-none focus:border-[#7FAE90]"
+                                            className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:outline-none focus:border-pink-300"
                                         />
                                     </div>
                                     <div>
@@ -194,7 +194,7 @@ const ContactForm = () => {
                                             value={formData.email}
                                             onChange={handleChange}
                                             placeholder="Email Address"
-                                            className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:outline-none focus:border-[#7FAE90]"
+                                            className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:outline-none focus:border-pink-300"
                                         />
                                     </div>
                                     <div>
@@ -204,7 +204,7 @@ const ContactForm = () => {
                                             value={formData.phone}
                                             onChange={handleChange}
                                             placeholder="Phone Number"
-                                            className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:outline-none focus:border-[#7FAE90]"
+                                            className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:outline-none focus:border-pink-300"
                                         />
                                     </div>
                                     <div>
@@ -214,7 +214,7 @@ const ContactForm = () => {
                                             onChange={handleChange}
                                             placeholder="Your Message"
                                             rows="4"
-                                            className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:outline-none focus:border-[#7FAE90] resize-none"
+                                            className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:outline-none focus:border-pink-300 resize-none"
                                         />
                                     </div>
                                     <div className="flex items-center gap-2">
@@ -224,7 +224,7 @@ const ContactForm = () => {
                                             id="privacyPolicyDesktop"
                                             checked={formData.privacyPolicy}
                                             onChange={handleChange}
-                                            className="rounded border-gray-300 text-[#7FAE90] focus:ring-[#7FAE90]"
+                                            className="rounded border-gray-300 text-pink-500 focus:ring-pink-300"
                                         />
                                         <label htmlFor="privacyPolicyDesktop" className="text-sm text-gray-600">
                                             I have read and accept the <a href="#" className="text-[#4C5B9B] hover:underline">privacy policy</a>

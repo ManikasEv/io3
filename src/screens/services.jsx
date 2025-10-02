@@ -178,7 +178,7 @@ const Services = () => {
         <div className="min-h-screen bg-white">
             <NavigationBar />
             {/* Desktop Layout */}
-            <div className="hidden md:flex w-full bg-secondary-500">
+            <div className="hidden md:flex w-full bg-gradient-to-br from-white to-pink-200">
                 <div className="w-2/5 bg-[#C5B9D6] min-h-screen p-12 pt-32">
                     <h2 className="text-4xl mb-12 ">Our Services</h2>
                     <div className="flex flex-col gap-8">
@@ -223,7 +223,7 @@ const Services = () => {
             </div>
 
             {/* Mobile Layout */}
-            <div className="md:hidden bg-secondary-500">
+            <div className="md:hidden bg-gradient-to-br from-white to-pink-200">
                 <div className="pt-20 px-4">
                     <h2 className="text-3xl mb-8">Our Services</h2>
                 </div>

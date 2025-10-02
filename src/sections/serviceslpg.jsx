@@ -98,7 +98,7 @@ const ServicesLpg = () => {
                                             <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
                                         </div>
                                         {/* Text Content */}
-                                        <div className="bg-[#8B5CF6] p-4 shadow-lg border-2 border-purple-300">
+                                        <div className="bg-[#6B4C93] p-4 shadow-lg border-2 border-purple-300">
                                             <div className="flex items-center gap-2">
                                                 <span className="text-sm text-white font-medium">{service.id}</span>
                                                 <h3 className="text-sm font-semibold text-white">
@@ -121,11 +121,11 @@ const ServicesLpg = () => {
                                 <motion.div
                                     key={service.id}
                                     onClick={() => setSelectedService(index)}
-                                    className={`
+                                        className={`
                                         flex items-center gap-4 p-4 rounded-lg cursor-pointer
-                                        transition-all duration-300 hover:bg-[#7C3AED] hover:shadow-lg
-                                        ${selectedService === index ? 'bg-[#8B5CF6] shadow-lg' : 'bg-[#8B5CF6]'}
-                                        group border-2 border-purple-300
+                                        transition-all duration-300 hover:bg-[#5A3D7A] hover:shadow-lg
+                                        ${selectedService === index ? 'bg-[#6B4C93] shadow-lg' : 'bg-[#6B4C93]'}
+                                        group border-2 bg-[#9C91BC]
                                     `}
                                     whileHover={{ x: 8, scale: 1.02 }}
                                     whileTap={{ scale: 0.98 }}
@@ -160,7 +160,7 @@ const ServicesLpg = () => {
                             <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent" />
                             <div className="absolute bottom-6 right-6">
                                 <motion.div 
-                                    className="bg-[#7FAE90] rounded-lg p-4 text-white max-w-[240px] shadow-xl"
+                                    className="bg-gradient-to-br from-white to-pink-200 rounded-lg p-4 text-gray-800 max-w-[240px] shadow-xl"
                                     initial={{ opacity: 0, y: 20 }}
                                     animate={{ opacity: 1, y: 0 }}
                                     transition={{ delay: 0.3, duration: 0.5 }}
@@ -168,7 +168,7 @@ const ServicesLpg = () => {
                                     <p className="text-sm mb-3">Not sure what fits your journey? Let's discover together.</p>
                                     <motion.button 
                                         onClick={() => navigate(`/services?service=${services[selectedService].id}`)}
-                                        className="bg-white text-[#7FAE90] px-6 py-2 rounded-lg text-sm font-medium hover:bg-white/90 transition-colors w-full"
+                                        className="bg-pink-300 text-white px-6 py-2 rounded-lg text-sm font-medium hover:bg-pink-400 transition-colors w-full"
                                         whileHover={{ scale: 1.05 }}
                                         whileTap={{ scale: 0.95 }}
                                         transition={{ duration: 0.2 }}
