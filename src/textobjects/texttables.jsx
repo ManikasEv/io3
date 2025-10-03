@@ -17,22 +17,51 @@ const textTables = {
   The greatest gift of this path?
   To recognize the truth of who you are.`,
 
-  energyTherapies: {
-    title: 'Energy Therapies',
-    subtitle: 'What are energy therapies?',
-    description: 'To understand what they are, let us first approach the two words separately:',
+  thetaHealing: {
+    title: 'Theta Healing',
+    subtitle: 'What is Theta Healing?',
+    description: 'Theta Healing is much more than just an energy technique. It is a practice of remembering our inner power and our direct connection with Source, whether we call it Creator, Universe, Love, or Higher Consciousness. Originally developed as a method of self-healing, it is now used globally as a path of personal and spiritual awakening.',
     sections: [
       {
-        heading: 'Energy',
-        content: 'Energy is the source of life. It exists within us, but also in everything that surrounds us. It exists everywhere: in humans, in nature, in animals, on planet Earth, in the entire universe. We perceive it through our sensory systems (sight, hearing, taste, smell, touch, proprioception), as well as through our intuitive abilities, such as empathy, intuition, perception and awareness. When we function as observers of our energy, and of the energy around us, we expand our consciousness. We allow ourselves to feel the energy, to respect it, to move it. Vitality and what we call "life" is an expression of energy. And we are all part of this unity.'
+        heading: 'How does it work?',
+        content: 'Through a guided meditative state, the brain enters Theta brainwaves — the frequency where the conscious mind relaxes and we gain access to the subconscious and the energetic field of the soul.'
       },
       {
-        heading: 'Therapy',
-        content: 'Therapy is a safe field, aligned with universal laws, which has as its intention the healing of every form of energy. It is a field of care to which we all have natural access. We need the therapeutic field when there is imbalance: in emotions, thoughts or experiences. When we recognize a dysfunction, a symptom or a disorder in the body or soul, then the field of therapy offers us everything that is necessary for healing to begin. As we are holistic beings, so therapy approaches us holistically, taking into account the human being as a unified whole and simultaneously everything that surrounds them.'
+        heading: 'Brainwave States',
+        content: 'As we gradually relax and visualize, we transition through different brainwave states:',
+        points: [
+          'Alpha waves: Associated with relaxation, creativity, imagination, intuition, and access to the subconscious.',
+          'Beta waves: Linked to active thought, decision-making, and focus in daily life.',
+          'Gamma waves: Related to fast brain activity, complex decision-making, and rapid responses.',
+          'Delta waves: The frequency of deep sleep, supporting physical and mental recovery.',
+          'Theta waves: The state of deep meditation, soul connection, creativity, healing, and self-awareness.'
+        ]
       },
       {
-        heading: 'Why do they collaborate?',
-        content: 'The reason energy and therapy collaborate is because we need the therapeutic field with its virtues as a "space of safety" to approach our energy. The protection that the therapeutic intention offers gives us access to energy with respect, awareness and effectiveness.'
+        heading: 'What can be achieved through Theta Healing:',
+        points: [
+          'Improve emotional and physical well-being',
+          'Identify and release limiting beliefs',
+          'Reprogram the subconscious with new, empowering truths',
+          'Heal emotional wounds from this or past lives',
+          'Release inherited imprints through DNA-level transformation',
+          'Reconnect with mental clarity, soul purpose, and higher self',
+          'Break free from recurring life patterns',
+          'Discover the root causes behind personal challenges'
+        ]
+      },
+      {
+        heading: 'What can change:',
+        points: [
+          'Your relationship with yourself, others, and life',
+          'The release of fear, guilt, shame, or anger',
+          'Activation of inner strengths, gifts, and potentials',
+          'Creation of space for new, aligned experiences'
+        ]
+      },
+      {
+        heading: 'More than a healing method',
+        content: 'Theta Healing is a life training. An inner journey that invites us to remember who we are, beyond programs and beliefs, reconnect with love as a creative force, and live with presence, meaning, and conscious awareness.'
       }
     ]
   },

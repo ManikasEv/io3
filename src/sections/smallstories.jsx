@@ -1,5 +1,8 @@
 import { motion, AnimatePresence } from 'framer-motion';
 import { useState, useEffect } from 'react';
+import card1Image from '../assets/card1.jpg';
+import card2Image from '../assets/card2.jpg';
+import card3Image from '../assets/card3.jpg';
 
 const SmallStories = () => {
     const [currentCardIndex, setCurrentCardIndex] = useState(0);
@@ -11,23 +14,24 @@ const SmallStories = () => {
             // statistic: "97%",
             // description: "Reported rate of release",
             title: "What connects us all?",
-            longText: "The way we color and experience the world. Research into the body’s functioning shows that it is our eyes and our perception that give color to everything around us. We are the ones who give meaning and importance to what surrounds us. Things exist because we observe them. What makes us different is the way we each created our belief system, the inner architecture formed from experience, thought, and emotion. We all share the same core needs, but the way we learned to meet those needs is deeply personal. We all experience the same spectrum of emotions, yet we each choose, moment by moment, how to feel and express them. We all face challenges, but the way we respond is shaped by our unique blend of beliefs and desires.",
-            bgImage: "bg-[url('/src/assets/release-image.jpg')]"
+            longText: "The way we color and experience the world. Research into the body's functioning shows that it is our eyes and our perception that give color to everything around us. We are the ones who give meaning and importance to what surrounds us. Things exist because we observe them. What makes us different is the way we each created our belief system, the inner architecture formed from experience, thought, and emotion. We all share the same core needs, but the way we learned to meet those needs is deeply personal. We all experience the same spectrum of emotions, yet we each choose, moment by moment, how to feel and express them. We all face challenges, but the way we respond is shaped by our unique blend of beliefs and desires.",
+            bgImage: card1Image
         },
         {
             id: 2,
             // statistic: "97%",
             // description: "Individual sessions completed",
             title: "What connects us all?",
-            longText: "Ιs our innate right to life, the right to experience it through the wise vehicle of our body. The body perceives experience through sensations, emotions, thoughts, and awareness. Everything we have ever lived and everything we wish to live, is stored in the subconscious, which is held within the body. It is here that all the elements shaping who we are today reside. In the present moment, we are potentially everything. The subconscious longs for our attention, our presence; it invites us to step into the role of the observer. This attention is often pulled into timelines called ‘past’ and ‘future’: the past as memories, and the future as desires, goals, or dreams. And yet, the most valuable insights we need right now often lie hidden in those very timelines, within the subconscious.",
-            bgImage: "bg-[url('/src/assets/sessions-image.jpg')]"
+            longText: "Ιs our innate right to life, the right to experience it through the wise vehicle of our body. The body perceives experience through sensations, emotions, thoughts, and awareness. Everything we have ever lived and everything we wish to live, is stored in the subconscious, which is held within the body. It is here that all the elements shaping who we are today reside. In the present moment, we are potentially everything. The subconscious longs for our attention, our presence; it invites us to step into the role of the observer. This attention is often pulled into timelines called 'past' and 'future': the past as memories, and the future as desires, goals, or dreams. And yet, the most valuable insights we need right now often lie hidden in those very timelines, within the subconscious.",
+            bgImage: card2Image
         },
         {
             id: 3,
             // statistic: "100%",
             // description: "Tailored care per individual",
             title: "What Is the Role of Energy Healing?",
-            longText: "Through energy healing and the techniques of complementary therapy we open a direct channel of communication between the subconscious and the conscious self. Everything that shows up in our lives as a dysfunctional pattern or experience is, in truth, a call for connection—an invitation to unite what is hidden with what is aware. This inner dialogue brings powerful gifts: Liberation; Restoration; Detachment from old identifications; Transmutation of stagnant energy; Reconnection with our truest self; and the awakening of the innate wisdom of the body. ‘Awakening happens when the subconscious becomes conscious.’ — IO"
+            longText: "Through energy healing and the techniques of complementary therapy we open a direct channel of communication between the subconscious and the conscious self. Everything that shows up in our lives as a dysfunctional pattern or experience is, in truth, a call for connection—an invitation to unite what is hidden with what is aware. This inner dialogue brings powerful gifts: Liberation; Restoration; Detachment from old identifications; Transmutation of stagnant energy; Reconnection with our truest self; and the awakening of the innate wisdom of the body. 'Awakening happens when the subconscious becomes conscious.' — IO",
+            bgImage: card3Image
         }
     ];
 
@@ -76,11 +80,12 @@ const SmallStories = () => {
                         exit={{ opacity: 0, x: -100 }}
                         transition={{ duration: 0.5 }}
                         onClick={() => setShowMobileText(!showMobileText)}
-                        className={`
-                            w-full h-[500px] rounded-2xl overflow-hidden relative
-                            ${cards[currentCardIndex].bgImage} bg-cover bg-center
-                            cursor-pointer
-                        `}
+                        className="w-full h-[500px] rounded-2xl overflow-hidden relative cursor-pointer"
+                        style={{
+                            backgroundImage: `url(${cards[currentCardIndex].bgImage})`,
+                            backgroundSize: 'cover',
+                            backgroundPosition: 'center'
+                        }}
                     >
                         <div className="absolute inset-0 bg-black/30" />
                         <AnimatePresence>
@@ -109,6 +114,35 @@ const SmallStories = () => {
                                 </div>
                             )}
                         </AnimatePresence>
+                        {/* Read more text */}
+                        <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 text-white text-center">
+                            <div className="flex items-center gap-3">
+                                <motion.div 
+                                    className="w-12 h-px bg-white"
+                                    animate={{
+                                        x: [-2, 2, -2]
+                                    }}
+                                    transition={{
+                                        duration: 3,
+                                        repeat: Infinity,
+                                        ease: "easeInOut"
+                                    }}
+                                />
+                                <span className="text-lg font-medium">Read</span>
+                                <span className="text-lg font-medium">More</span>
+                                <motion.div 
+                                    className="w-12 h-px bg-white"
+                                    animate={{
+                                        x: [2, -2, 2]
+                                    }}
+                                    transition={{
+                                        duration: 3,
+                                        repeat: Infinity,
+                                        ease: "easeInOut"
+                                    }}
+                                />
+                            </div>
+                        </div>
                     </motion.div>
                 </AnimatePresence>
             </div>
@@ -120,10 +154,14 @@ const SmallStories = () => {
                         key={card.id}
                         className="h-[600px] rounded-2xl overflow-hidden relative group"
                     >
-                        <div className={`
-                            absolute inset-0 ${card.bgImage} bg-cover bg-center
-                            transition-transform duration-300 group-hover:scale-105
-                        `} />
+                        <div 
+                            className="absolute inset-0 transition-transform duration-300 group-hover:scale-105"
+                            style={{
+                                backgroundImage: `url(${card.bgImage})`,
+                                backgroundSize: 'cover',
+                                backgroundPosition: 'center'
+                            }}
+                        />
                         <div className="absolute inset-0 bg-black/30 group-hover:bg-black/80 transition-colors duration-300" />
                         
                         {/* Default Content */}
@@ -145,6 +183,36 @@ const SmallStories = () => {
                                 <p className="text-white/90 text-lg">
                                     {card.longText}
                                 </p>
+                            </div>
+                        </div>
+                        
+                        {/* Read more text */}
+                        <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 text-white text-center transition-opacity duration-300 group-hover:opacity-0">
+                            <div className="flex items-center gap-3">
+                                <motion.div 
+                                    className="w-12 h-px bg-white"
+                                    animate={{
+                                        x: [-2, 2, -2]
+                                    }}
+                                    transition={{
+                                        duration: 3,
+                                        repeat: Infinity,
+                                        ease: "easeInOut"
+                                    }}
+                                />
+                                <span className="text-lg font-medium">Read</span>
+                                <span className="text-lg font-medium">More</span>
+                                <motion.div 
+                                    className="w-12 h-px bg-white"
+                                    animate={{
+                                        x: [2, -2, 2]
+                                    }}
+                                    transition={{
+                                        duration: 3,
+                                        repeat: Infinity,
+                                        ease: "easeInOut"
+                                    }}
+                                />
                             </div>
                         </div>
                     </div>

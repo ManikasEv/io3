@@ -21,8 +21,8 @@ const ServicesLpg = () => {
         },
         {
             id: "02",
-            name: textTables.energyTherapies.title,
-            image: earthImg,
+            name: textTables.thetaHealing.title,
+            image: thetaImg,
         },
         {
             id: "03",

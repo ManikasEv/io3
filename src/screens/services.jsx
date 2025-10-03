@@ -18,11 +18,11 @@ const services = [
     },
     {
         id: '02',
-        title: 'Energy Therapies',
-        displayTitle: textTables.energyTherapies.title,
-        subtitle: textTables.energyTherapies.subtitle,
-        description: textTables.energyTherapies.description,
-        sections: textTables.energyTherapies.sections
+        title: 'Theta Healing',
+        displayTitle: textTables.thetaHealing.title,
+        subtitle: textTables.thetaHealing.subtitle,
+        description: textTables.thetaHealing.description,
+        sections: textTables.thetaHealing.sections
     },
     {
         id: '03',
