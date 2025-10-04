@@ -9,7 +9,7 @@ const Attributes = () => {
             id: 1, 
             title: "Regression Therapy",
             color: "from-primary-500/90 to-primary-500",
-            position: "ml-[5%]",
+            position: "ml-[10%]",
             marginTop: "",
             animation: { range: 20, duration: 3.2 }
         },
@@ -17,7 +17,7 @@ const Attributes = () => {
             id: 2, 
             title: "Theta Healing",
             color: "from-primary-500/90 to-primary-500",
-            position: "ml-[65%]",
+            position: "ml-[70%]",
             marginTop: "-mt-64",
             animation: { range: 20, duration: 3.2 }
         },
@@ -25,7 +25,7 @@ const Attributes = () => {
             id: 3, 
             title: "Quantum Biofeedback",
             color: "from-primary-700/90 to-primary-700",
-            position: "ml-[35%]",
+            position: "ml-[40%]",
             marginTop: "-mt-20",
             animation: { range: 25, duration: 2.7 }
         },
@@ -33,7 +33,7 @@ const Attributes = () => {
             id: 4, 
             title: "Hypnotherapy",
             color: "from-secondary-500/90 to-secondary-500",
-            position: "ml-[65%]",
+            position: "ml-[70%]",
             marginTop: "-mt-20",
             animation: { range: 30, duration: 3.5 }
         },
@@ -41,7 +41,7 @@ const Attributes = () => {
             id: 5, 
             title: "Rejuvance",
             color: "from-secondary-500/90 to-secondary-500",
-            position: "ml-[5%]",
+            position: "ml-[10%]",
             marginTop: "-mt-64",
             animation: { range: 30, duration: 3.5 }
         }
