@@ -88,6 +88,7 @@ const ContactForm = () => {
                             className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:outline-none focus:border-pink-300 resize-none"
                         />
                     </div>
+                    {/* Privacy Policy Checkbox - Commented out until policy is ready
                     <div className="flex items-center gap-2">
                         <input
                             type="checkbox"
@@ -101,6 +102,7 @@ const ContactForm = () => {
                             I have read and accept the <a href="#" className="text-[#4C5B9B] hover:underline">privacy policy</a>
                         </label>
                     </div>
+                    */}
                     <button
                         type="submit"
                         className="w-full bg-[#C0DBED] text-black font-medium py-3 rounded-lg hover:bg-[#C0DBED]/90 transition-colors"
@@ -217,6 +219,7 @@ const ContactForm = () => {
                                             className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:outline-none focus:border-pink-300 resize-none"
                                         />
                                     </div>
+                                    {/* Privacy Policy Checkbox - Commented out until policy is ready
                                     <div className="flex items-center gap-2">
                                         <input
                                             type="checkbox"
@@ -230,6 +233,7 @@ const ContactForm = () => {
                                             I have read and accept the <a href="#" className="text-[#4C5B9B] hover:underline">privacy policy</a>
                                         </label>
                                     </div>
+                                    */}
                                     <button
                                         type="submit"
                                         className="w-full bg-[#C0DBED] text-black font-medium py-3 rounded-lg hover:bg-[#C0DBED]/90 transition-colors"
