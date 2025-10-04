@@ -32,7 +32,7 @@ const ServicesLpg = () => {
         {
             id: "04",
             name: textTables.regressionTherapy.title,
-            image: thetaImg,
+            image: earthImg,
         },
         {
             id: "05",

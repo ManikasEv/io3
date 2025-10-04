@@ -94,12 +94,12 @@ const SmallStories = () => {
                                     initial={{ opacity: 0, y: 20 }}
                                     animate={{ opacity: 1, y: 0 }}
                                     exit={{ opacity: 0, y: 20 }}
-                                    className="absolute inset-0 bg-black/90 p-6 overflow-y-auto"
+                                    className="absolute inset-0 bg-gradient-to-br from-pink-50 to-pink-100 p-6 overflow-y-auto"
                                 >
-                                    <h3 className="text-2xl font-bold text-white mb-4">
+                                    <h3 className="text-2xl font-bold text-black mb-4">
                                         {cards[currentCardIndex].title}
                                     </h3>
-                                    <p className="text-white/90 text-lg">
+                                    <p className="text-black/90 text-lg">
                                         {cards[currentCardIndex].longText}
                                     </p>
                                 </motion.div>
@@ -114,35 +114,37 @@ const SmallStories = () => {
                                 </div>
                             )}
                         </AnimatePresence>
-                        {/* Read more text */}
-                        <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 text-white text-center">
-                            <div className="flex items-center gap-3">
-                                <motion.div 
-                                    className="w-12 h-px bg-white"
-                                    animate={{
-                                        x: [-2, 2, -2]
-                                    }}
-                                    transition={{
-                                        duration: 3,
-                                        repeat: Infinity,
-                                        ease: "easeInOut"
-                                    }}
-                                />
-                                <span className="text-lg font-medium">Read</span>
-                                <span className="text-lg font-medium">More</span>
-                                <motion.div 
-                                    className="w-12 h-px bg-white"
-                                    animate={{
-                                        x: [2, -2, 2]
-                                    }}
-                                    transition={{
-                                        duration: 3,
-                                        repeat: Infinity,
-                                        ease: "easeInOut"
-                                    }}
-                                />
+                        {/* Read more text - only show when text is not expanded */}
+                        {!showMobileText && (
+                            <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 text-white text-center">
+                                <div className="flex items-center gap-3">
+                                    <motion.div 
+                                        className="w-12 h-px bg-white"
+                                        animate={{
+                                            x: [-2, 2, -2]
+                                        }}
+                                        transition={{
+                                            duration: 3,
+                                            repeat: Infinity,
+                                            ease: "easeInOut"
+                                        }}
+                                    />
+                                    <span className="text-lg font-medium">Read</span>
+                                    <span className="text-lg font-medium">More</span>
+                                    <motion.div 
+                                        className="w-12 h-px bg-white"
+                                        animate={{
+                                            x: [2, -2, 2]
+                                        }}
+                                        transition={{
+                                            duration: 3,
+                                            repeat: Infinity,
+                                            ease: "easeInOut"
+                                        }}
+                                    />
+                                </div>
                             </div>
-                        </div>
+                        )}
                     </motion.div>
                 </AnimatePresence>
             </div>
