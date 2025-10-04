@@ -84,9 +84,11 @@ const ServicesLpg = () => {
                                     style={{ scrollSnapAlign: 'start' }}
                                 >
                                     <motion.div 
-                                        className="rounded-2xl overflow-hidden h-[400px] flex flex-col shadow-2xl hover:shadow-3xl transition-all duration-300 hover:scale-[1.02]"
+                                        className="rounded-2xl overflow-hidden h-[400px] flex flex-col shadow-2xl hover:shadow-3xl transition-all duration-300 hover:scale-[1.02] cursor-pointer"
                                         whileHover={{ y: -8 }}
+                                        whileTap={{ scale: 0.98 }}
                                         transition={{ duration: 0.3 }}
+                                        onClick={() => navigate(`/services?service=${service.id}`)}
                                     >
                                         {/* Image Container */}
                                         <div className="flex-1 bg-white/10 relative overflow-hidden">
