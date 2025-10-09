@@ -157,14 +157,14 @@ const SmallStories = () => {
                         className="h-[600px] rounded-2xl overflow-hidden relative group"
                     >
                         <div 
-                            className="absolute inset-0 transition-transform duration-300 group-hover:scale-105"
+                            className="absolute inset-0 transition-opacity duration-300 group-hover:opacity-0"
                             style={{
                                 backgroundImage: `url(${card.bgImage})`,
                                 backgroundSize: 'cover',
                                 backgroundPosition: 'center'
                             }}
                         />
-                        <div className="absolute inset-0 bg-black/30 group-hover:bg-black/80 transition-colors duration-300" />
+                        <div className="absolute inset-0 bg-black/30 group-hover:opacity-0 transition-opacity duration-300" />
                         
                         {/* Default Content */}
                         <div className="absolute bottom-8 left-8 text-white transition-opacity duration-300 group-hover:opacity-0">
@@ -177,12 +177,12 @@ const SmallStories = () => {
                         </div>
 
                         {/* Hover Content */}
-                        <div className="absolute inset-0 p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300 overflow-hidden">
-                            <div className="h-full overflow-y-auto scrollbar-thin scrollbar-thumb-white/20 scrollbar-track-transparent">
-                                <h3 className="text-2xl font-bold text-white mb-4">
+                        <div className="absolute inset-0 bg-gradient-to-br from-pink-50 to-pink-100 p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300 overflow-hidden">
+                            <div className="h-full overflow-y-auto scrollbar-thin scrollbar-thumb-black/20 scrollbar-track-transparent">
+                                <h3 className="text-2xl font-bold text-black mb-4">
                                     {card.title}
                                 </h3>
-                                <p className="text-white/90 text-lg">
+                                <p className="text-black/90 text-lg">
                                     {card.longText}
                                 </p>
                             </div>

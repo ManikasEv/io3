@@ -10,6 +10,13 @@ const ContactForm = () => {
         privacyPolicy: false
     });
 
+    const [status, setStatus] = useState({
+        loading: false,
+        success: false,
+        error: false,
+        message: ''
+    });
+
     const handleChange = (e) => {
         const { name, value, type, checked } = e.target;
         setFormData(prev => ({
@@ -18,10 +25,65 @@ const ContactForm = () => {
         }));
     };
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        // Handle form submission
-        console.log(formData);
+        setStatus({ loading: true, success: false, error: false, message: '' });
+
+        try {
+            // Create FormData exactly like the Web3Forms documentation
+            const formDataToSend = new FormData();
+            formDataToSend.append('access_key', 'bded3bc6-fa25-485c-90dd-2bd98ab7edb1');
+            formDataToSend.append('name', formData.name);
+            formDataToSend.append('email', formData.email);
+            formDataToSend.append('phone', formData.phone);
+            formDataToSend.append('message', formData.message);
+            formDataToSend.append('subject', 'New Contact Form Submission from Inside Observation');
+            
+            // Convert FormData to object, then to JSON (exactly like the docs)
+            const object = Object.fromEntries(formDataToSend);
+            const json = JSON.stringify(object);
+            
+            console.log('Sending JSON:', json);
+            
+            const response = await fetch('https://api.web3forms.com/submit', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                },
+                body: json
+            });
+
+            const result = await response.json();
+            console.log('Web3Forms response:', result);
+
+            if (result.success) {
+                setStatus({
+                    loading: false,
+                    success: true,
+                    error: false,
+                    message: 'Thank you! Your message has been sent successfully. We will get back to you soon.'
+                });
+                // Reset form
+                setFormData({
+                    name: '',
+                    email: '',
+                    phone: '',
+                    message: '',
+                    privacyPolicy: false
+                });
+            } else {
+                throw new Error(result.message || 'Form submission failed');
+            }
+        } catch (error) {
+            console.error('Form submission error:', error);
+            setStatus({
+                loading: false,
+                success: false,
+                error: true,
+                message: 'Oops! Something went wrong. Please try again or contact us directly via email.'
+            });
+        }
     };
 
     return (
@@ -48,14 +110,31 @@ const ContactForm = () => {
                 </div>
 
                 <form onSubmit={handleSubmit} className="space-y-4">
+                    {/* Status Message */}
+                    {status.message && (
+                        <motion.div
+                            initial={{ opacity: 0, y: -10 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            className={`p-4 rounded-lg ${
+                                status.success 
+                                    ? 'bg-green-50 text-green-800 border border-green-200' 
+                                    : 'bg-red-50 text-red-800 border border-red-200'
+                            }`}
+                        >
+                            {status.message}
+                        </motion.div>
+                    )}
+
                     <div>
                         <input
                             type="text"
                             name="name"
                             value={formData.name}
                             onChange={handleChange}
-                            placeholder="First Name Last Name"
-                            className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:outline-none focus:border-pink-300"
+                            placeholder="Full Name"
+                            required
+                            disabled={status.loading}
+                            className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:outline-none focus:border-pink-300 disabled:bg-gray-100 disabled:cursor-not-allowed"
                         />
                     </div>
                     <div>
@@ -65,7 +144,9 @@ const ContactForm = () => {
                             value={formData.email}
                             onChange={handleChange}
                             placeholder="Email Address"
-                            className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:outline-none focus:border-pink-300"
+                            required
+                            disabled={status.loading}
+                            className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:outline-none focus:border-pink-300 disabled:bg-gray-100 disabled:cursor-not-allowed"
                         />
                     </div>
                     <div>
@@ -75,7 +156,8 @@ const ContactForm = () => {
                             value={formData.phone}
                             onChange={handleChange}
                             placeholder="Phone Number"
-                            className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:outline-none focus:border-pink-300"
+                            disabled={status.loading}
+                            className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:outline-none focus:border-pink-300 disabled:bg-gray-100 disabled:cursor-not-allowed"
                         />
                     </div>
                     <div>
@@ -85,7 +167,9 @@ const ContactForm = () => {
                             onChange={handleChange}
                             placeholder="Your Message"
                             rows="4"
-                            className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:outline-none focus:border-pink-300 resize-none"
+                            required
+                            disabled={status.loading}
+                            className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:outline-none focus:border-pink-300 resize-none disabled:bg-gray-100 disabled:cursor-not-allowed"
                         />
                     </div>
                     {/* Privacy Policy Checkbox - Commented out until policy is ready
@@ -105,9 +189,10 @@ const ContactForm = () => {
                     */}
                     <button
                         type="submit"
-                        className="w-full bg-[#C0DBED] text-black font-medium py-3 rounded-lg hover:bg-[#C0DBED]/90 transition-colors"
+                        disabled={status.loading}
+                        className="w-full bg-[#C0DBED] text-black font-medium py-3 rounded-lg hover:bg-[#C0DBED]/90 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
                     >
-                        Contact Us
+                        {status.loading ? 'Sending...' : 'Contact Us'}
                     </button>
                 </form>
 
@@ -179,14 +264,31 @@ const ContactForm = () => {
                         <div className="pt-8 pr-12">
                             <div className="bg-white rounded-lg p-8 shadow-lg max-w-md ml-auto">
                                 <form onSubmit={handleSubmit} className="space-y-4">
+                                    {/* Status Message */}
+                                    {status.message && (
+                                        <motion.div
+                                            initial={{ opacity: 0, y: -10 }}
+                                            animate={{ opacity: 1, y: 0 }}
+                                            className={`p-4 rounded-lg ${
+                                                status.success 
+                                                    ? 'bg-green-50 text-green-800 border border-green-200' 
+                                                    : 'bg-red-50 text-red-800 border border-red-200'
+                                            }`}
+                                        >
+                                            {status.message}
+                                        </motion.div>
+                                    )}
+
                                     <div>
                                         <input
                                             type="text"
                                             name="name"
                                             value={formData.name}
                                             onChange={handleChange}
-                                            placeholder="First Name Last Name"
-                                            className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:outline-none focus:border-pink-300"
+                                            placeholder="Full Name"
+                                            required
+                                            disabled={status.loading}
+                                            className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:outline-none focus:border-pink-300 disabled:bg-gray-100 disabled:cursor-not-allowed"
                                         />
                                     </div>
                                     <div>
@@ -196,7 +298,9 @@ const ContactForm = () => {
                                             value={formData.email}
                                             onChange={handleChange}
                                             placeholder="Email Address"
-                                            className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:outline-none focus:border-pink-300"
+                                            required
+                                            disabled={status.loading}
+                                            className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:outline-none focus:border-pink-300 disabled:bg-gray-100 disabled:cursor-not-allowed"
                                         />
                                     </div>
                                     <div>
@@ -206,7 +310,8 @@ const ContactForm = () => {
                                             value={formData.phone}
                                             onChange={handleChange}
                                             placeholder="Phone Number"
-                                            className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:outline-none focus:border-pink-300"
+                                            disabled={status.loading}
+                                            className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:outline-none focus:border-pink-300 disabled:bg-gray-100 disabled:cursor-not-allowed"
                                         />
                                     </div>
                                     <div>
@@ -216,7 +321,9 @@ const ContactForm = () => {
                                             onChange={handleChange}
                                             placeholder="Your Message"
                                             rows="4"
-                                            className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:outline-none focus:border-pink-300 resize-none"
+                                            required
+                                            disabled={status.loading}
+                                            className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:outline-none focus:border-pink-300 resize-none disabled:bg-gray-100 disabled:cursor-not-allowed"
                                         />
                                     </div>
                                     {/* Privacy Policy Checkbox - Commented out until policy is ready
@@ -236,9 +343,10 @@ const ContactForm = () => {
                                     */}
                                     <button
                                         type="submit"
-                                        className="w-full bg-[#C0DBED] text-black font-medium py-3 rounded-lg hover:bg-[#C0DBED]/90 transition-colors"
+                                        disabled={status.loading}
+                                        className="w-full bg-[#C0DBED] text-black font-medium py-3 rounded-lg hover:bg-[#C0DBED]/90 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
                                     >
-                                        Contact Us
+                                        {status.loading ? 'Sending...' : 'Contact Us'}
                                     </button>
                                 </form>
                             </div>
