@@ -1,0 +1,21 @@
+{
+    "name": "Inside Observation",
+    "short_name": "IO",
+    "description": "Holistic Healing & Wellness Services",
+    "icons": [
+        {
+            "src": "/android-chrome-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "/android-chrome-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ],
+    "theme_color": "#2D3C66",
+    "background_color": "#FAFAFA",
+    "display": "standalone",
+    "start_url": "/"
+}
